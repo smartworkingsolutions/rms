@@ -1,0 +1,59 @@
+/* Animation Line */
+.animate-line {
+	display: inline;
+	background-size: 0px 2px;
+	background-position: 0px 100%;
+	background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
+	background-repeat: no-repeat;
+	transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+}
+.animate-line:hover {
+	background-size: 100% 2px;
+}
+
+/* Animation Flip */
+.animate-flip {
+    perspective: 1000px;
+}
+
+.animate-flip span {
+	@apply relative inline-block p-0; 
+	transition: transform 0.3s;
+	transform-origin: 50% 0;
+	transform-style: preserve-3d;
+}
+.animate-flip span:before {
+	@apply absolute top-full left-0 w-full h-full text-center;
+	content: attr(data-hover);
+	transition: color 0.3s;
+	transform: rotateX(-90deg);
+	transform-origin: 50% 0;
+}
+
+.animate-flip:hover span,
+.animate-flip:focus span {
+	transform: rotateX(90deg) translateY(-22px);
+}
+
+.animate-flip:hover span:before,
+.animate-flip:focus span:before {
+	@apply text-white;
+}
+
+/* Animation slide right */
+.animate-slide-right {
+	position: relative;
+	z-index: 1;
+}
+
+.animate-slide-right::before {
+	content: '';
+	@apply w-full h-full bg-theme-color absolute left-0 top-0 -z-[1];
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform 250ms ease-in;
+}
+.animate-slide-right:hover::before {
+	transform: scaleX(1);
+	transform-origin: left;
+}
