@@ -14,7 +14,7 @@ get_header();
 
 			<div class="w-full bg-light-gray px-12 md:px-20 py-12">
 
-				<h2 class="text-theme-color font-bold text-3xl mb-12"><?php esc_html_e( 'Applying for job', 'rms' ); ?></h2>
+				<h2 class="text-theme-color font-bold text-3xl mb-12"><?php the_field( 'form_heading' ); ?></h2>
 
 				<?php echo do_shortcode( '[contactforms form_name="apply_form"]' ); ?>
 

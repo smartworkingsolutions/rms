@@ -23,13 +23,87 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_625020af64ea6",
+                            "label": "Select Background type",
+                            "name": "background_type",
+                            "type": "button_group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "image": "Image",
+                                "video": "Video"
+                            },
+                            "allow_null": 0,
+                            "default_value": "",
+                            "layout": "horizontal",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_6250479fb94d0",
+                            "label": "Overlay",
+                            "name": "hero_banner_overlay",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_625047dab94d1",
+                            "label": "Overlay Background Color",
+                            "name": "overlay_bg_color",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_6250479fb94d0",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "rgba(0,0,0,0.3)",
+                            "enable_opacity": 1,
+                            "return_format": "string"
+                        },
+                        {
                             "key": "field_61efd2ca1d947",
                             "label": "Image",
                             "name": "hero_banner_image",
                             "type": "image",
                             "instructions": "",
                             "required": 1,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_625020af64ea6",
+                                        "operator": "==",
+                                        "value": "image"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -45,6 +119,33 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": ""
+                        },
+                        {
+                            "key": "field_625020fb64ea7",
+                            "label": "Vimeo Video ID",
+                            "name": "vimeo_video_id",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_625020af64ea6",
+                                        "operator": "==",
+                                        "value": "video"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": 180586912,
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
                         },
                         {
                             "key": "field_61efd3c51d948",
@@ -2033,6 +2134,112 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_621642bdf5cac": {
+                    "key": "layout_621642bdf5cac",
+                    "name": "enquiry_form",
+                    "label": "Enquiry Form",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_621642d5f5cad",
+                            "label": "Heading",
+                            "name": "enquiry_form_heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_621642e4f5cae",
+                            "label": "Ad Image",
+                            "name": "enquiry_form_ad_image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_62165682fa029",
+                            "label": "Ad Title",
+                            "name": "enquiry_form_ad_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_62165adeb13d6",
+                            "label": "Ad Title 2",
+                            "name": "enquiry_form_ad_title2",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_621656bffa02a",
+                            "label": "Ad Button Link",
+                            "name": "enquiry_form_ad_button_link",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -2073,5 +2280,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1644309736
+    "modified": 1649429891
 }

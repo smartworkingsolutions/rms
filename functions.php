@@ -168,7 +168,7 @@ function rms_scripts() {
 	// Fontawesome icons.
 	wp_enqueue_script( 'fontawesome5', '//kit.fontawesome.com/a0eab14e0c.js', [], $version, true );
 	// Scroll Reveal JS.
-	wp_enqueue_script( 'scroll-reveal', '//unpkg.com/scrollreveal', [], $version, true );
+	wp_enqueue_script( 'scroll-reveal', '//unpkg.com/scrollreveal', [], $version, false );
 
 	// FB.
 	wp_enqueue_script( 'fb-root', '//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v12.0', [], '', true );

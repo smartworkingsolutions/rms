@@ -72,30 +72,20 @@ Class contactforms_apply_form { // phpcs:ignore
 				</div>
 
 				<div class="form-group flex flex-col">
-					<label for="employer">Current Employer</label>
-					<input class="mt-1 border-neutral-300 rounded focus:border-0 focus:outline-none focus:ring-theme-color" id="employer" type="text" name="employer" placeholder="Current Employer" />
+					<label for="expectaion">Salary Expectation <small>(annually)</small></label>
+					<input class="mt-1 border-neutral-300 rounded focus:border-0 focus:outline-none focus:ring-theme-color" id="expectaion" type="text" name="expectaion" placeholder="35000" />
 				</div>
 
 				<div class="form-group flex flex-col">
-					<label for="salary">Current Salary <small>(annually)</small> <span class="required text-primary">*</span></label>
-					<input class="mt-1 border-neutral-300 rounded focus:border-0 focus:outline-none focus:ring-theme-color" id="salary" type="text" name="salary" placeholder="25000 USD" required />
-				</div>
-
-				<div class="form-group flex flex-col">
-					<label for="expectaion">Salary Expectation <small>(annually)</small> <span class="required text-primary">*</span></label>
-					<input class="mt-1 border-neutral-300 rounded focus:border-0 focus:outline-none focus:ring-theme-color" id="expectaion" type="text" name="expectaion" placeholder="35000 USD" required />
-				</div>
-
-				<div class="form-group flex flex-col">
-					<label for="location">Preferred Location for national role? <span class="required text-primary">*</span></label>
-					<input class="mt-1 border-neutral-300 rounded focus:border-0 focus:outline-none focus:ring-theme-color" id="location" type="text" name="location" placeholder="Global" required />
+					<label for="location">Preferred Location for National Role</label>
+					<input class="mt-1 border-neutral-300 rounded focus:border-0 focus:outline-none focus:ring-theme-color" id="location" type="text" name="location" placeholder="Global" />
 				</div>
 
 			</div>
 
 			<div class="w-full">
-				<h3 class="text-theme-color font-bold text-2xl mt-12 mb-4">Equal Opportunities</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.</p>
+				<h3 class="text-theme-color font-bold text-2xl mt-12 mb-4">' . get_field( 'af_heading_2' ) . '</h3>
+				<p>' . get_field( 'af_description' ) . '</p>
 			</div>
 
 			<div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-8 mt-8">
@@ -108,7 +98,7 @@ Class contactforms_apply_form { // phpcs:ignore
 
 		// Select.
 		$inner_html .= '<div class="form-group flex flex-col">
-			<label for="marital">Marital Status <span class="required text-primary">*</span></label>
+			<label for="marital">Marital Status</label>
 			<select name="marital" id="marital" class="mt-1 border-neutral-300 rounded focus:border-0 focus:outline-none focus:ring-theme-color">
 				<option value="">Select Status</option>';
 
@@ -129,7 +119,7 @@ Class contactforms_apply_form { // phpcs:ignore
 
 		// Select.
 		$inner_html .= '<div class="form-group flex flex-col">
-		<label for="gender">Gender <span class="required text-primary">*</span></label>
+		<label for="gender">Gender</label>
 		<select name="gender" id="gender" class="mt-1 border-neutral-300 rounded focus:border-0 focus:outline-none focus:ring-theme-color">
 			<option value="">Select Gender</option>';
 
@@ -150,29 +140,29 @@ Class contactforms_apply_form { // phpcs:ignore
 
 		// Simple fields again.
 		$inner_html .= '<div class="form-group flex flex-col">
-				<label for="sexual_orientation">Sexual Orientation <span class="required text-primary">*</span></label>
-				<input class="mt-1 border-neutral-300 rounded focus:border-0 focus:outline-none focus:ring-theme-color" id="sexual_orientation" type="text" name="sexual_orientation" placeholder="Sexual Orientation" required />
+				<label for="sexual_orientation">Sexual Orientation</label>
+				<input class="mt-1 border-neutral-300 rounded focus:border-0 focus:outline-none focus:ring-theme-color" id="sexual_orientation" type="text" name="sexual_orientation" placeholder="Sexual Orientation" />
 			</div>
 
 			<div class="form-group flex flex-col">
-				<label for="religion">Religion or Belief <span class="required text-primary">*</span></label>
-				<input class="mt-1 border-neutral-300 rounded focus:border-0 focus:outline-none focus:ring-theme-color" id="religion" type="text" name="religion" placeholder="Christian" required />
+				<label for="religion">Religion or Belief</label>
+				<input class="mt-1 border-neutral-300 rounded focus:border-0 focus:outline-none focus:ring-theme-color" id="religion" type="text" name="religion" placeholder="Christian" />
 			</div>
 
 			<div class="form-group flex flex-col">
-				<label for="ethnic_origin">Ethnic Origin <span class="required text-primary">*</span></label>
-				<input class="mt-1 border-neutral-300 rounded focus:border-0 focus:outline-none focus:ring-theme-color" id="ethnic_origin" type="text" name="ethnic_origin" placeholder="Ethnic Origin" required />
+				<label for="ethnic_origin">Ethnic Origin</label>
+				<input class="mt-1 border-neutral-300 rounded focus:border-0 focus:outline-none focus:ring-theme-color" id="ethnic_origin" type="text" name="ethnic_origin" placeholder="Ethnic Origin" />
 			</div>
 
 		</div>
 
 		<div class="w-full">
-			<h3 class="text-theme-color font-bold text-2xl mt-12 mb-4">Do you consider yourself to have a disability according to the terms of the Equality<br>Act 2010 Disability Legistation?</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.</p>
+			<h3 class="text-theme-color font-bold text-2xl mt-12 mb-4">' . get_field( 'af_heading_3' ) . '</h3>
+			<p>' . get_field( 'af_description_2' ) . '</p>
 		</div>';
 
 		// Radio buttons.
-		$services    = [ 'Yes', 'No', 'Prefer Not to say' ];
+		$services    = [ 'Yes', 'No', 'Prefer Not to Say' ];
 		$inner_html .= '<div class="mt-4 space-y-2">';
 		foreach ( $services as $s ) {
 			$inner_html .= '<div class="form-group flex items-center">
@@ -199,7 +189,7 @@ Class contactforms_apply_form { // phpcs:ignore
 			</div>
 		</div>
 
-		<p class="mt-8 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis</p>';
+		<p class="mt-8 mb-4">' . get_field( 'af_bottom_text' ) . '</p>';
 
 		// [RECAPTCHA - START]
 		$inner_html .= '<p>';
@@ -304,6 +294,83 @@ Class contactforms_ask_form { // phpcs:ignore
 			<div>
 				<button type="submit" class="button mt-8">Submit</button>
 			</div>
+		';
+		$inner_html .= '</div>';
+
+		return $inner_html;
+	}
+}
+
+/**
+ * Ask for help form class
+ */
+Class contactforms_enquiry_form { // phpcs:ignore
+
+	/**
+	 * WHO GETS THIS EMAIL? CAN BE COMMA SEPARATED LIST.
+	 */
+	public function emails() {
+		// return "david@netbizgroup.co.uk,arran@netbizgroup.co.uk,sajid@netbizgroup.co.uk";.
+		return get_contact_form_emails( 'ask_form' );
+	}
+
+	/**
+	 * DO WE SEND AN AUTO RESPONDER TO THE "FOUND EMAIL"? (LEAVE BLANK TO DISABLE).
+	 */
+	public function autoresponder() {
+		$html = '
+			<p>Hi {title} {name},</p>
+			<p>Thank you for your enquiry.</p>
+			<p>A member of our team will be in touch soon.</p>
+		';
+		return $html;
+	}
+
+	/**
+	 * Main form.
+	 */
+	public function form() {
+
+		// SET UP THE FORM.
+		$pb = new contactforms_postback();
+
+		$inner_html = '';
+
+		// KEEP THIS IN - IF THERE IS AN ISSUE WITH MAILCHIMP, IT WILL SHOW A MESSAGE.
+		foreach ( $pb->ga( 'errors' ) as $form_error ) {
+			$inner_html .= '<p style="color: red;">' . $form_error . '</p>';
+		}
+
+		// [SIMPLE TEXT FIELDS - START].
+		$inner_html .= '
+		<div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-12">
+			<div class="form-group flex flex-col">
+				<label class="text-2xl" for="name">Full Name</label>
+				<input class="mt-2 py-4 border-neutral-300 focus:border-0 focus:outline-none focus:ring-theme-color" id="name" type="text" name="name" placeholder="John Doe" required />
+			</div>
+			<div class="form-group flex flex-col">
+				<label class="text-2xl" for="email">Email Address</label>
+				<input class="mt-2 py-4 border-neutral-300 focus:border-0 focus:outline-none focus:ring-theme-color" id="email" type="text" name="email" placeholder="example@company.com" required />
+			</div>
+		</div>
+
+		<div class="form-group flex flex-col mt-12 lg:mt-16">
+			<label class="text-2xl" for="employer">Message</label>
+			<textarea name="help_message" cols="30" rows="8" class="mt-2 border-neutral-300 focus:border-0 focus:outline-none focus:ring-theme-color" placeholder="Write your message here..."></textarea>
+		</div>
+		';
+
+		// [RECAPTCHA - START]
+		$inner_html .= '<p class="mt-8">';
+		// SIZE CAN BE COMPACT OR NORMAL (SNAPS TO COMPACT - SEE JS - WHEN WINDOW < 800PX WIDE).
+		$inner_html .= do_shortcode( "[contactforms_recaptcha size='normal']" );
+		$inner_html .= '</p>';
+		// [RECAPTCHA - END]
+
+		// THIS CLASS HIDES THE SUBMIT BUTTON UNTIL RECAPTCHA IS COMPLETED (SAVES MISSING IT).
+		$inner_html .= "<div class='js-wait-for-recaptcha'>";
+		$inner_html .= '
+			<button type="submit" class="w-full button py-7 mt-12 lg:mt-16">Send Enquiry</button>
 		';
 		$inner_html .= '</div>';
 

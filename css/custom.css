@@ -120,13 +120,21 @@ p {
     box-shadow: inset 0px 0px 0px 1px #464644;
 }
 .search-form:focus-within .search-input {
-    /* z-index: 1; */
     opacity: 1;
     cursor: initial;
 }
-/* .search-form .search-input {
+
+.vimeo-wrapper iframe {
+    width: 100vw;
+    height: 56.25vw;
+    min-height: 100vh;
+    min-width: 177.77vh;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: -1;
-} */
+}
 
 @media (min-width: 1600px) {
     .timeline {

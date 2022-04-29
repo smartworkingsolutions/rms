@@ -55,13 +55,9 @@ $description = get_sub_field( 'testimonials_description' );
 						if ( $text ) {
 							?>
 							<div class="content relative">
-								<svg class="absolute -top-4 left-0" width="28" height="30" viewBox="0 0 28 30">
-									<text id="quote-left" transform="translate(14 26)" fill="#c62509" font-size="30" font-family="FontAwesome6Pro-Solid, 'Font Awesome \36  Pro Solid'"><tspan x="-13.125" y="0">quote-left</tspan></text>
-								</svg>
+								<svg class="absolute -top-4 left-0" width="28" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path fill="#c62509" d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"/></svg>
 								<?php echo '<p class="first-letter:pl-8">' . wp_kses_post( $text ) . '</p>'; ?>
-								<svg class="absolute -bottom-2 right-0" width="28" height="30" viewBox="0 0 28 30">
-									<text id="quote-right" transform="translate(14 26)" fill="#c62509" font-size="30" font-family="FontAwesome6Pro-Solid, 'Font Awesome \36  Pro Solid'"><tspan x="-13.125" y="0">quote-right</tspan></text>
-								</svg>
+								<svg class="absolute -bottom-2 right-0" width="28" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path fill="#c62509" d="M464 32H336c-26.5 0-48 21.5-48 48v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48zm-288 0H48C21.5 32 0 53.5 0 80v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48z"/></svg>
 							</div>
 							<?php
 						}

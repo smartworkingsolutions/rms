@@ -10,13 +10,13 @@ $description = get_sub_field( '3_grid_description' );
 $count       = 1;
 ?>
 
-<section class="knowledge mt-12 mb-28">
+<section class="knowledge mb-28">
 	<div class="container">
 
 		<?php
 		// Heading.
 		if ( $heading || $description ) {
-			echo '<div class="heading-section text-center mb-12 lg:mb-16">';
+			echo '<div class="heading-section text-center mt-12">';
 
 			if ( $heading ) {
 				printf(
@@ -35,7 +35,7 @@ $count       = 1;
 		// Grid.
 		if ( have_rows( '3_grid_grid_lists' ) ) :
 
-			echo '<div class="about-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-20">';
+			echo '<div class="about-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-20 mt-12 lg:mt-16">';
 
 			// Loop through rows.
 			while ( have_rows( '3_grid_grid_lists' ) ) :

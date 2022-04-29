@@ -32,7 +32,7 @@ jQuery(document).ready(function() {
 
     // ScrollReveal
 	jQuery(document).ready(function() {
-		ScrollReveal().reveal('.border-grid .scroll-reveal');
+		ScrollReveal().reveal('.border-grid');
 	});
 
 });
