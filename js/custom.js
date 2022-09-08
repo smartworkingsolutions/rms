@@ -35,6 +35,38 @@ jQuery(document).ready(function() {
 		ScrollReveal().reveal('.border-grid');
 	});
 
+	jQuery('.accreditations-carousel').slick({
+		slidesToShow: 6,
+		slidesToScroll: 3,
+		dots: false,
+		arrows: false,
+		autoplay: true,
+		infinite: true,
+		responsive: [
+			{
+				breakpoint: 1280,
+				settings: {
+				  	slidesToShow: 6,
+					slidesToScroll: 3
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+				  	slidesToShow: 3,
+					slidesToScroll: 3
+				}
+			},
+			{
+				breakpoint: 0,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2
+				}
+			}
+		]
+	});
+
 });
 
 jQuery(document).ready(function() {

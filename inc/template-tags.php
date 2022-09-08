@@ -244,7 +244,7 @@ function theme_header_html() {
 	?>
 
 	<!-- Header start -->
-	<header class="site-header w-full h-24 lg:h-20 flex justify-between items-center<?php echo esc_html( $class ); ?> relative z-10">
+	<header class="site-header w-full h-24 lg:h-20 flex justify-between items-center<?php echo esc_html( $class ); ?> relative z-20">
 		<?php theme_logo(); ?>
 		<?php get_template_part( 'template-parts/header/main', 'menu' ); ?>
 		<?php get_template_part( 'template-parts/header/contact', 'info' ); ?>

@@ -153,6 +153,9 @@ function rms_scripts() {
 	// Magnific popup css.
 	wp_enqueue_style( 'rms-magnific-popup-css', $path . '/css/magnific-popup.css', [], $version );
 
+	// Slick slider.
+	wp_enqueue_style( 'rms-slick-css', $path . '/css/slick.css', [], $version );
+
 	/**
 	 * Scripts
 	 */
@@ -164,6 +167,7 @@ function rms_scripts() {
 	// Theme's scrips.
 	wp_enqueue_script( 'rms-custom', $path . '/js/custom.js', [ 'jquery' ], $version, true );
 	wp_enqueue_script( 'rms-magnific-popup', $path . '/js/jquery.magnific-popup.min.js', [], $version, true );
+	wp_enqueue_script( 'rms-slick', $path . '/js/slick.min.js', [], $version, true );
 
 	// Fontawesome icons.
 	wp_enqueue_script( 'fontawesome5', '//kit.fontawesome.com/a0eab14e0c.js', [], $version, true );
@@ -171,7 +175,7 @@ function rms_scripts() {
 	wp_enqueue_script( 'scroll-reveal', '//unpkg.com/scrollreveal', [], $version, false );
 
 	// FB.
-	wp_enqueue_script( 'fb-root', '//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v12.0', [], '', true );
+	wp_enqueue_script( 'fb-root', '//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v12.0', [], '', true ); // phpcs:ignore
 
 }
 add_action( 'wp_enqueue_scripts', 'rms_scripts' );

@@ -27,7 +27,7 @@ $heading = get_sub_field( 'accreditations_heading' );
 		// Check lists exists.
 		if ( have_rows( 'accreditations_logos' ) ) :
 
-			echo '<div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-x-8 justify-center items-center">';
+			echo '<div class="accreditations-carousel">';
 
 			// Loop through rows.
 			while ( have_rows( 'accreditations_logos' ) ) :
@@ -36,13 +36,14 @@ $heading = get_sub_field( 'accreditations_heading' );
 				// Load sub field value.
 				$image = '';
 				if ( get_sub_field( 'accreditations_image' ) ) {
-					$image = df_resize( get_sub_field( 'accreditations_image' ), '', 239, 147, true, true );
+					$image = df_resize( get_sub_field( 'accreditations_image' ), '', 222, 167, true, true );
 				}
+				// $image    = get_sub_field( 'accreditations_image' );
 				$alt_text = get_sub_field( 'accreditations_alt_text' );
 
 				if ( $image ) {
 					printf(
-						'<img class="w-auto" src="%s" alt="%s">',
+						'<img src="%s" alt="%s">',
 						esc_url( $image['url'] ),
 						esc_html( $alt_text )
 					);

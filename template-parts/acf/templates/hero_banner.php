@@ -39,7 +39,7 @@ $btn_url       = get_sub_field( 'hero_banner_button_url' );
 	if ( 'video' === $layout && $video_id ) {
 		?>
 		<div class="w-full h-screen vimeo-wrapper overflow-hidden">
-			<iframe src="https://player.vimeo.com/video/<?php echo esc_html( $video_id ); ?>?background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+			<iframe src="https://player.vimeo.com/video/<?php echo esc_html( $video_id ); ?>?background=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;transparent=0&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;autopause=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 		</div>
 		<?php
 	}

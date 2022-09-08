@@ -136,6 +136,20 @@ p {
     z-index: -1;
 }
 
+/* Carousel */
+.slick-dots {
+    @apply flex space-x-3 absolute -bottom-14 left-1/2 -translate-x-1/2;
+}
+.slick-dots li.slick-active button {
+    @apply bg-primary opacity-100;
+}
+.slick-dots button {
+    @apply w-[10px] h-[10px] bg-gray-400 opacity-50 rounded-xl p-0 mx-0 my-3 -indent-[9999px] cursor-pointer;
+}
+.accreditations-carousel .slick-track {
+    /* @apply grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-8 justify-center items-center; */
+}
+
 @media (min-width: 1600px) {
     .timeline {
         @apply h-[1800px];
